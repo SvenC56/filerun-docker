@@ -1,4 +1,4 @@
-FROM php:8.1.23-apache-bullseye
+FROM php:8.2.28-apache-bullseye
 ENV FR_DB_HOST=db \
 	FR_DB_PORT=3306 \
 	FR_DB_NAME=filerun \
@@ -8,9 +8,9 @@ ENV FR_DB_HOST=db \
 	APACHE_RUN_USER_ID=1000 \
 	APACHE_RUN_GROUP=user \
 	APACHE_RUN_GROUP_ID=1000 \
-	LIBVIPS_VERSION="8.14.4" \
-	LIBREOFFICE_VERSION="7.5.5" \
-	PHP_VERSION_SHORT="8.1"
+	LIBVIPS_VERSION="8.16.1" \
+	LIBREOFFICE_VERSION="25.2.3" \
+	PHP_VERSION_SHORT="8.2"
 VOLUME ["/var/www/html", "/user-files"]
 COPY ./filerun /filerun
 RUN apt-get update  \
